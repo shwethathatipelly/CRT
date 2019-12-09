@@ -1,0 +1,547 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\f0\fs22\par
+1. MAXIMUM INTEGER\par
+\pard\sa200\sl276\slmult1 # include<studio.h>\par
+#include<limits.h>\par
+void main()\par
+\{\par
+int a;\par
+a=INT_MAX;\par
+printf("%d",a);\par
+\pard\sa200\sl276\slmult1\}\par
+2. MINIMUM INTEGER\par
+\pard\sa200\sl276\slmult1 # include<studio.h>\par
+#include<limits.h>\par
+void main()\par
+\{\par
+int a;\par
+a=INT_MIN;\par
+printf("%d",a);\par
+\pard\sa200\sl276\slmult1\}\par
+\par
+3. FLOAT PROGRAM\par
+#include<limits.h>\par
+void main()\par
+\{\par
+    float a=4.35;\par
+    printf("%f",a);\par
+\}\par
+4. Print A-Z with ASCII values \par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+for (i=65;i<=90;i++)\par
+   printf("%c=%d",i,i);\par
+\}\par
+5.Print A-Z and a-z with ASCII values\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+for (i=65;i<=122;i++)\par
+   printf("%c=%d",i,i);\par
+\}\par
+6. Print ASCII values with characters\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+for (i=0;i<=200;i++)\par
+   printf("%c=%d",i,i);\par
+\}\par
+7. ESCAPE SIGNAL CHARACTERS\par
+#include <stdio.h>\par
+#include<limits.h>\par
+void main()\par
+\{\par
+   printf("abcd\\nxyz");\par
+\}\par
+8.\par
+#include <stdio.h>\par
+#include<limits.h>\par
+void main()\par
+\{\par
+   printf("abcd\\bxyz");\par
+\}\par
+output: abcxyz\par
+9.\par
+#include <stdio.h>\par
+#include<limits.h>\par
+void main()\par
+\{\par
+    \par
+   printf("abcd\\rxyz");\par
+\}\par
+output: xyzd\par
+10.\par
+#include <stdio.h>\par
+#include<limits.h>\par
+void main()\par
+\{\par
+    \par
+   printf("abcd\\fxyz");\par
+\}\par
+output:abcd\par
+                         xyz\par
+11.THE OCTAL VALUE OF GIVEN NUMBER\par
+#include <stdio.h>\par
+#include <limits.h>\par
+voidmain()\par
+\{\par
+    int a=29;\par
+    printf("%o",a);\par
+\}\par
+output: 35\par
+12.HEXA NUMBER\par
+ #include <stdio.h>\par
+#include <limits.h>\par
+voidmain()\par
+\{\par
+    int a=29;\par
+    printf("%x",a);\par
+\}\par
+output: 1d\par
+13. printing decimal number from octal number(0 in front of any number indicates that number is an octal number)\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    int a=035;\par
+    printf("%d",a);\par
+\}\par
+output: 29\par
+14. printing decimal number from hexa decimal(0x in front of any number indicates as hexa decimal number)\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    int a=0x1d;\par
+    printf("%d",a);\par
+\}\par
+15.printing a word with number of charaters in it\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    int a;\par
+    a=printf("hello");\par
+    printf("%d",a);\par
+\}\par
+output: hello5\par
+16. .printing a word with number of charaters in it\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    int a;\par
+    a=printf("hello\\n");\par
+    printf("%d",a);\par
+\}\par
+output:hello\par
+               6    ----------> (as \\n is also a (single)character)\par
+17.using SCANF function\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    int a,b,c;\par
+    c=scanf("%d%d",&a,&b);\par
+    printf("%d",c);\par
+\}\par
+output:enter  a,b values for ex:\par
+45\par
+35\par
+2    ---------> this is the c value\par
+18. \par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    printf("%d",10+20);\par
+\}\par
+19.\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    printf("%d",10+'A');\par
+\}\par
+output:75\par
+20.\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    printf("%d",10+'a');\par
+\}\par
+output:107\par
+21.\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    printf("%d",'b'+'a');\par
+\}\par
+output:195\par
+22.(if yoy have to get accurate answer you have to assign a float in the given numbers)\par
+#include <stdio.h>\par
+#include <limits.h>\par
+void main()\par
+\{\par
+    printf("%f",7.0/2);\par
+\}\par
+23.(in percentails decimal values are not used so we have to use the function fmod)\par
+#include <stdio.h>\par
+#include <limits.h>\par
+#include <math.h>\par
+void main()\par
+\{\par
+    float a;\par
+    a=fmod(12.75,5.2);\par
+    printf("%f",a);\par
+\}\par
+output:2.350000\par
+24.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b;\par
+    b=a++;\par
+    printf("%d%d",a,b);\par
+\}\par
+output: 6 5\par
+25.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b;\par
+    b=a++;\par
+    printf("%d",a++);\par
+\}\par
+output:5\par
+27.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b;\par
+    \par
+    printf("%d",a++);\par
+    printf("%d",a);\par
+\}\par
+output: 5 6\par
+27.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b;\par
+    \par
+    printf("%d",a--);\par
+    printf("%d",a);\par
+\}\par
+output: 5 4\par
+28.(&& ----> and gate operation)\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=0,c;\par
+    c=b&&a;\par
+    printf("%d",c);\par
+\}\par
+output:0\par
+29.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=0,c;\par
+    c=b&&a++;\par
+    printf("%d",c);\par
+\}\par
+output:0\par
+30.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=0,c;\par
+    c=b&&a++;\par
+    printf("%d",a);\par
+\}\par
+output:5\par
+31.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=0,c;\par
+    c=b&&a++;\par
+\pard\sa200\sl360\slmult1     printf("%d %d",c,a); (as the c value is the final answer and it is fixed to false as b=0 then a value is not changed and is 5)\par
+\pard\sa200\sl276\slmult1\}\par
+output: 0  5\par
+32.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=8,c;\par
+    c=b&&a++;\par
+    printf("%d %d",c,a);\par
+\}\par
+output: 1 6\par
+33.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=8,c;\par
+    c=b||a++;\par
+    printf("%d %d",c,a);\par
+\}\par
+output: 1 5\par
+34.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=0,c;\par
+    c=b||a++;\par
+    printf("%d %d",c,a);\par
+\}\par
+output: 1 6\par
+35.(in any logical operation first order is and gate and next is or gate)\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=8,c,d=0;\par
+    c=b||a&&d;\par
+    printf("%d %d",c,a);\par
+\}\par
+output: 1 5\par
+36.(=! ----> not operator(gate))\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,c;\par
+    c=!a;\par
+    printf("%d %d",c,a);\par
+\}\par
+output: 0  5\par
+37.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=5,c;\par
+    if(a==b)\par
+      printf("yes");\par
+    else\par
+      printf("no");\par
+\}\par
+output:yes\par
+38.(operator here is =)\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    if(a=b)\par
+      printf("yes");\par
+    else\par
+      printf("no");\par
+    printf("%d",a);  \par
+\}\par
+output:yes6\par
+39.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    if(a)\par
+      printf("yes");\par
+    else\par
+      printf("no");\par
+    printf("%d",a);  \par
+\}\par
+output:yes5\par
+40.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=0,c;\par
+    if(a=b)\par
+      printf("yes");\par
+    else\par
+      printf("no");\par
+    printf("%d",a);  \par
+\}\par
+output:no 0\par
+41.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=0,c;\par
+    if(a!=b)\par
+      printf("yes");\par
+    else\par
+      printf("no");\par
+    printf("%d",a);  \par
+\}\par
+output:yes5\par
+42.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=0,c;\par
+    if(a<b)\par
+      printf("yes");\par
+    else\par
+      printf("no");\par
+    printf("%d",a);  \par
+\}\par
+output:no5\par
+43.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    if(0)\par
+      printf("yes");\par
+    else\par
+      printf("no");\par
+    printf("%d",a);  \par
+\}\par
+output:no5\par
+\b BITWISE Operator:\par
+\b0 let a=5, b=6\par
+a=0101\par
+b=0110\par
+a&b=0100------>4\par
+a|b=0111------->7\par
+a^b=0011------->3(^--> xnor operation)\par
+a>>1(right shift)-------> 0010---->2   \par
+a>>3(3 times of right shift)---->0000----->0\par
+a<<1(left shift)---->01010----->10  (# a*2^1=10)\par
+a<<6(6 times left shift)----->320       (# a*2^6=5*2^6=320)\par
+~a=  -6     (# ~ tilt operator)\par
+let a= -11      ( ~a=10)\par
+44.program to write any of this operations\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    c=a&b;\par
+    printf("%d",c);  \par
+\}\par
+output: 4\par
+45.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    c=a|b;\par
+    printf("%d",c);  \par
+\}\par
+output:7\par
+46.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    c=a^b;\par
+    printf("%d",c);  \par
+\}\par
+output:3\par
+47.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    c=~a;\par
+    printf("%d",c);  \par
+\}\par
+output:  -6\par
+\b ASSIGNMENT OPEARTIONS:\par
+=,+=,-=,*=,/=,%=,<<=,>>=,&=,^=,|=\b0\par
+48.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5;\par
+    a+=7;\par
+    printf("%d",a);  \par
+\} \par
+output:12\par
+\b MISC OPERATORS:\par
+\b0 sizeof(),&,*,?,:\b\par
+\b0 49.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a;\par
+    printf("%d",sizeof(a));  \par
+\}\par
+output: 4\par
+50.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    long double a;\par
+    printf("%d",sizeof(a));  \par
+\}\par
+output:12\par
+51.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    long int a;\par
+    printf("%d",sizeof(a));  \par
+\}\par
+output:8\par
+52. \par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    float a;\par
+    printf("%d",sizeof(a));  \par
+\}\par
+output:4\par
+53.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b;\par
+    b= sizeof(a);\par
+    printf("%d %d",a,b);  \par
+\}\par
+output5 4\par
+54.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b;\par
+    b=sizeof(a++);\par
+    printf("%d %d",a,b);  \par
+\}\par
+output:5  4  (# as this sizeof() operator does not includes any other operation inside this)\par
+55.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    c=a<b?a:b;    (#if the condition a<b satisfies then c value is a, if not satisfies 0)(smallest of                                                                                                          two no.s)\par
+    printf("%d",c); \par
+\}\par
+output:5  \par
+56.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=6,b=5,c;\par
+    c=a>b?a:b;   (# largest of two no.s)\par
+    printf("%d",c);  \par
+\}\par
+output:6\par
+57.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a=5,b=6,c;\par
+    c=7?1:b;         (# as c not equal to 0 so it takes true then it gives1)\par
+    printf("%d",c);  \par
+\}\par
+output:1\par
+}
+ 

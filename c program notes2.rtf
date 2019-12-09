@@ -1,0 +1,480 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\f0\fs22 1. \b\fs28 Operation Priority\b0\fs22\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int c;\par
+    c=20/200*200;\par
+    printf("%d",c);\par
+\}\par
+output: 0\par
+2. using a float value \par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int c;\par
+    c=20.0/200*200;\par
+    printf("%d",c);\par
+\}\par
+output:20\par
+3.\b\fs28 Explicit Function\fs36\par
+\b0\fs22 #include <stdio.h>\par
+void main()\par
+\{\par
+    int c;\par
+    c=(float)20/200*200;\par
+    printf("%d",c);\par
+\}\par
+4.\b\fs28 IMPLICIT FUNCTION\par
+\b0\fs22 #include <stdio.h>\par
+void main()\par
+\{\par
+    int c;\par
+    c=(float)20/200*200;\par
+    printf("%d",c);\par
+\}\par
+output: x=107,z=108.000000\par
+5.EXplicit function\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    double x=1.2;\par
+    int sum;\par
+    sum=(int)x+1;\par
+    printf("sum=%d",sum);\par
+\}\par
+output: sum=2\par
+6. IMPLIMENTING Simple if condition\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int n;\par
+    scanf("%d",&n);\par
+    if(n>=0)\par
+     printf("entered number is positive");\par
+\}\par
+output: (print a number for example 46)\par
+entered number is positive\par
+7. IMPLIMENTING If-else condition\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int n;\par
+    scanf("%d",&n);\par
+    if(n%2==0)\par
+     printf("entered number is even");\par
+    else\par
+     printf("entered number is odd");\par
+\}\par
+output:(enter any number for ex: 77)\par
+entered number is odd\par
+8. IMPLIMENTING If-else LADDER\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    char n;\par
+    scanf("%c",&n);\par
+    if(n>='0' && n<='9')\par
+     printf("entered data is digit");\par
+    else if('A'<=n && n<='Z')\par
+     printf("entered data is uppercase letter");\par
+    else if('a'<=n && n<='z')\par
+     printf("entered data is lowercase letter");\par
+    else \par
+     printf("invalid input");\par
+\}\par
+9.\b\fs28 SWITCH(\b0 avoidind so many else-if conditions\b )\par
+\b0\fs22 #include <stdio.h>\par
+void main()\par
+\{\par
+    int n;\par
+    scanf("%d",&n);\par
+    switch(n)\par
+    \{\par
+        case 1:printf("sunday");break;\par
+        case 2:printf("monday");break;\par
+        case 3:printf("tuesday");break;\par
+        case 4:printf("wednesday");break;\par
+        case 5:printf("thrusday");break;\par
+        case 6:printf("friday");break;\par
+        case 7:printf("saturday");break;\par
+        default:printf("invalid input");\par
+    \}\par
+\}    \par
+output: (for ex:) 6\par
+friday\par
+10.SWITCH(WITHOUT BREAK)\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int n;\par
+    scanf("%d",&n);\par
+    switch(n)\par
+    \{\par
+        case 1:printf("sunday");\par
+        case 2:printf("monday");\par
+        case 3:printf("tuesday");\par
+        case 4:printf("wednesday");\par
+        case 5:printf("thrusday");\par
+        case 6:printf("friday");\par
+        case 7:printf("saturday");\par
+        default:printf("invalid input");\par
+    \}\par
+\}    \par
+output: 6\par
+\pard\sa200\sl276\slmult1\tx8550\tx9090\tx9990  fridaysaturdayinvalid input\par
+11. program using switch\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a,b,ch;\par
+    scanf("%d %d %d",&a,&b,&ch);\par
+    switch(ch)\par
+    \{\par
+        case 1:printf("%d",a+b);break;\par
+        case 2:printf("%d",a-b);break;\par
+        case 3:printf("%d",a*b);break;\par
+        case 4:printf("%d",a/b);break;\par
+        case 5:printf("%d",a%b);break;\par
+        default:printf("invalid input");\par
+    \}\par
+\}   \par
+output: 10----->a\par
+5------>b\par
+2------>ch(switch)\par
+5------->a-b value\par
+12.program using character in the switch function \par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int a,b;\par
+    char ch;\par
+    scanf("%d %d",&a,&b);\par
+    scanf(" %c",&ch); ---------->(give space before %c to get correct output or intialize char before inputing a,b values)\par
+    switch(ch)\par
+    \{\par
+        case '+':printf("%d",a+b);break;\par
+        case '-':printf("%d",a-b);break;\par
+        case '*':printf("%d",a*b);break;\par
+        case '/':printf("%d",a/b);break;\par
+        case '%':printf("%d",a%b);break;\par
+        default:printf("invalid input");\par
+    \}\par
+\}    \par
+output: 77\par
+7\par
+/\par
+11\par
+\b\fs28 LOOPS\par
+\pard{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\tx8550\tx9090\tx9990\b0\fs22 while loop \par
+{\pntext\f0 ii.\tab}do while loop\par
+{\pntext\f0 iii.\tab} for loop\par
+\pard\sa200\sl276\slmult1\tx8550\tx9090\tx9990 13. program using while loop\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i=10; \par
+    while(i>=1)\par
+     \{\par
+        printf("%d ",i);\par
+        i--;\par
+    \}\par
+\}    \par
+output: 10 9 8 7 6 5 4 3 2 1\par
+14. program using while loop\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i=1; \par
+    while(i<=5)\par
+    \{\par
+        printf("%d ",i);\par
+        i++;\par
+    \}\par
+\}    \par
+output: 1 2 3 4 5\par
+15.printing odd no.s from 11 to 50\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i=11; \par
+    while(i<=50)\par
+    \{\par
+        printf("%d ",i);\par
+        i+=2;\par
+    \}\par
+\}    \par
+output: 11 13 15 17 19 21 23 ____________ 47 49\par
+16. printing odd no.s from 1 to n\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i=1,n; \par
+    scanf("%d",&n);\par
+    while(i<=n)\par
+    \{\par
+        printf("%d ",i);\par
+        i+=2;\par
+    \}\par
+\}    \par
+output: 100\par
+1 3 5 _____________________ 97 99\par
+17.printing even no.s from 0 to n\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i=0,n; \par
+    scanf("%d",&n);\par
+    while(i<=n)\par
+    \{\par
+        printf("%d ",i);\par
+        i+=2;\par
+    \}\par
+\}    \par
+output: 100\par
+0 2 4 6______________ 98 100\par
+18. printing decrement in even no.s from n to 0\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,n; \par
+    scanf("%d",&n);\par
+     i=n;\par
+    while(i>=0)\par
+    \{\par
+        printf("%d ",i);\par
+        i-=2;\par
+    \}\par
+\}    \par
+output: 20\par
+20 18 16 14__________ 2 0\par
+19. DO while\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i=1;\par
+    do\par
+    \{\par
+        printf("%d ",i);\par
+        i++;\par
+    \} while(i<=10);\par
+\}    \par
+output:\par
+1 2 3 4 5 6 7 8 9 10\par
+20.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i=12;\par
+    do\par
+    \{\par
+        printf("%d ",i);\par
+        i++;\par
+    \} while(i<=10);\par
+\}    \par
+output:  12\par
+21. FOR LOOP\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+    for(i=1;i<=5;i++)\par
+    \{\par
+        printf("%d ",i);\par
+    \}\par
+\}     \par
+output: 1 2 3 4 5\par
+22.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+    for(i=1;i<=5;i++);\par
+    \{\par
+        printf("%d ",i);\par
+    \}\par
+\}    \par
+output: 6\par
+23.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+    for(i=1;i<20;i+=2);\par
+    \{\par
+        printf("%d ",i);\par
+    \}\par
+\}     \par
+output: 21\par
+24.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+    for(i=0;i<=20;i+=2)\par
+    \{\par
+        printf("%d ",i);\par
+    \}\par
+\}     \par
+output: 0 2 4 6 8_______ 18 20\par
+25.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+    for(i=10;i-5;i--)\par
+    \{\par
+        printf("%d ",i);\par
+    \}\par
+\}    \par
+output: 10 9 8 7 6\par
+26.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i;\par
+    for(i=1;i%5;i++)\par
+    \{\par
+        printf("%d ",i);\par
+    \}\par
+\}    \par
+output: 1 2 3 4\par
+27. write a program to print the digits of a given no.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,r;\par
+    scanf("%d",&i);\par
+    while(i!=0)\par
+    \{\par
+        r=i%10;\par
+        i=i/10;\par
+        printf("%d ",r);\par
+    \}\par
+\}    \par
+output: 73846\par
+6 4 8 3 7\par
+28. prog to find sum of the digits of anumber\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,r;\par
+    int sum=0;\par
+    scanf("%d",&i);\par
+    while(i!=0)\par
+    \{\par
+        r=i%10;\par
+        i=i/10;\par
+        sum = sum+r;\par
+    \}\par
+printf("%d",sum);    \par
+\}   \par
+output:57368\par
+29\par
+29.print reverse of a number\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,r;\par
+    int s=0;\par
+    scanf("%d",&i);\par
+    while(i!=0)\par
+    \{\par
+        r=i%10;\par
+        i=i/10;\par
+        s = s*10+r;\par
+    \}\par
+printf("%d",sum);    \par
+\}    \par
+output:5678\par
+8765\par
+30.sum of first and last digits of a number\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,r,l;\par
+    int sum=0;\par
+    scanf("%d",&i);\par
+    r=i%10;\par
+    while(i!=0)\par
+    \{\par
+        l=i%10;\par
+        i=i/10;\par
+    \}\par
+sum = sum +r+l;\par
+printf("%d",sum);\par
+\}\par
+output: 307\par
+10\par
+31. sum of the odd digitd in the number\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,r;\par
+    int sum=0;\par
+    scanf("%d",&i);\par
+    while(i!=0)\par
+    \{\par
+        r=i%10;\par
+        i=i/10;\par
+        if(r%2==1)\par
+          sum=sum+r;\par
+    \}\par
+printf("%d",sum);\par
+\}\par
+output: 648736\par
+10\par
+32. sum of odd position digits in a number\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,r,sum=0,c=0;\par
+    scanf("%d",&i);\par
+    while(i!=0)\par
+    \{\par
+        c++;\par
+        r=i%10;\par
+        i=i/10;\par
+        if(c%2==1)\par
+          sum=sum+r;\par
+    \}\par
+printf("%d",sum);\par
+\}\par
+output:5673\par
+9\par
+33.sum of even position digits for given no.\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,r,sum=0,c=0;\par
+    scanf("%d",&i);\par
+    while(i!=0)\par
+    \{\par
+        c++;\par
+        r=i%10;\par
+        i=i/10;\par
+        if(c%2==0)\par
+          sum=sum+r;\par
+    \}\par
+printf("%d",sum);\par
+\}\par
+output:5673\par
+12\par
+43. how many digits in a number\par
+#include <stdio.h>\par
+void main()\par
+\{\par
+    int i,c=0;\par
+    scanf("%d",&i);\par
+    while(i!=0)\par
+    \{\par
+        c++;\par
+        i=i/10;\par
+    \}\par
+printf("%d",c);\par
+\}\par
+output:7834512\par
+7\par
+}
+ 
